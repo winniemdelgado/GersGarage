@@ -1,0 +1,24 @@
+<ion-header>
+  <div routerLink='/home'>Home</div>
+  <div routerLink='/booking'>Booking</div>
+  <div routerLink='/services'>Shop</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+<div class="container">
+  <form class="new-booking-form">
+    <select (change)='setType($event)' placeholder="Select Type">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="Annual Service" >Annual Service</option>
+      <option value="Major Service" >Major Service</option>
+      <option value="Repair/Fault" >Repair/Fault</option>
+      <option value="Major Repair" >Major Repair</option>
+    </select>
+  <select  (change)='setMechanic($event)' placeholder="Select Mechanic">
+    <option value="" selected disabled hidden>Choose here</option>
+    <option  *ngFor="let mechanic of mechanics" [value]='mechanic.mechanicid'>{{mechanic.mechanicName}}</option>
+  </select>
+  <ion-button (click)='sendBooking()'>SUBMIT</ion-button>
+  </form>
+</div>
+</div>

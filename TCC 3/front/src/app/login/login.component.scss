@@ -1,0 +1,41 @@
+.container{
+    background-image: url("https://cdn.dealeraccelerate.com/rock/1/53/2056/1920x1440/1957-chevrolet-bel-air");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-panel{
+    display: flex;
+background-color: rgba(189, 0, 0, 0.719);
+border-radius: 20px;
+padding: 1%;
+border: 1px solid rgb(255, 255, 255);
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+}
+.title{
+    font-size: 24px;
+
+}
+ion-input{
+    margin: 5% 0;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    --placeholder-color:black
+}
+ion-button{
+    --background: grey
+}
+ion-button:hover{
+    background-color: rgb(187, 187, 187);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}

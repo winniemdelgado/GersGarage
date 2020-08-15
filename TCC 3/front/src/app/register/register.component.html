@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="login-panel">
+    <div class="title">Register</div>
+    <form>
+      <ion-input #login placeholder="Login"></ion-input>
+      <ion-input #password placeholder="Password" type="Password"></ion-input>
+      <ion-input #name placeholder="Name"></ion-input>
+      <ion-input #email placeholder="Email"></ion-input>
+      <ion-input #phone placeholder="Phone"></ion-input>
+      <select (change)="setType($event)" placeholder="Select Vehicle Type">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option  value='Car'>Car</option>
+        <option value='Motorcycle'>Motorcycle</option>
+        <option value='Truck'>Truck</option>
+      </select>
+      <select (change)="setMake($event)" placeholder="Select Vehicle Make">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option [value]='make.name' *ngFor="let make of makes">{{make.name}}</option>
+      </select>
+      <select (change)="setFuel($event)"  placeholder="Select Vehicle Fuel">
+        <option value="" selected disabled hidden>Choose here</option>
+        <option [value]='fuel'  *ngFor="let fuel of fuels">{{fuel}}</option>
+      </select>
+      <ion-input #license placeholder="License Plate"></ion-input>
+      <ion-input class="comment" #comment placeholder="Comment"></ion-input>
+    </form>
+    <ion-button type="text" (click)="sendInfo(login.value,password.value,name.value,email.value,phone.value,license.value,comment.value)">SUBMIT</ion-button>
+    <ion-button type="text" routerLink="/login">LOGIN</ion-button>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<ion-header>
+  <div routerLink='/all-bookings'>Booking</div>
+  <div routerLink='/shop-admin'>Shop</div>
+  <div routerLink='/mechanics'>Mechanics</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+  <div class="container">
+    <div class="title">All Bookings</div>
+    <div class="booking-list">
+      <div class="booking-card" *ngFor="let booking of bookings">
+        <div>Type: {{booking.bookingtype}}</div>
+        <div>Customer: {{booking.customer.customername}}</div>
+        <select  (change)='setMechanic($event,booking)' placeholder="Select Mechanic">
+          <option value="" selected disabled hidden>{{booking.mechanic.mechanicName}}</option>
+          <option  *ngFor="let mechanic of mechanics" [ngValue]='mechanic'>{{mechanic.mechanicName}}</option>
+        </select>
+        <input type="text" (change)="setDate($event,booking)" placeholder="Date: {{booking.bookingdate}}"/>
+        <select (change)="setProgress($event,booking)">
+          <option value="" selected disabled hidden>Progress: {{booking.progress}}</option>
+          <option  value='Booked'>Progress: Booked</option>
+          <option value='In Service'>Progress: In Service</option>
+          <option value='Fixed/Completed'>Progress: Fixed / Completed</option>
+          <option value='Collected'>Progress: Collected</option>
+          <option value='Unrepairable/Scrapped'>Progress: Unrepairable/Scrapped</option>
+        </select>
+        <input type="number" (change)="setCost($event,booking)" placeholder="Cost: {{booking.cost}}"/>
+        <ion-button (click)="deleteBooking(booking)">Delete</ion-button>
+        <ion-button (click)="save(booking)">Save</ion-button>
+      </div>
+    </div>
+  </div>
+  </div>

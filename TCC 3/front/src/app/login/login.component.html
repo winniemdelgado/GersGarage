@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="login-panel">
+    <div class="title">Login</div>
+    <form>
+      <ion-input #login placeholder="Login"></ion-input>
+      <ion-input #password placeholder="Password" type="Password"></ion-input>
+    </form>
+    <ion-button (click)="sendInfo(login.value,password.value)">ENTER AS CUSTOMER</ion-button>
+    <ion-button (click)="sendAdmin(login.value,password.value)">ENTER AS ADMIN</ion-button>
+    
+    <ion-button routerLink="/register">REGISTER</ion-button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<ion-header>
+  <div routerLink='/home'>Home</div>
+  <div routerLink='/booking'>Booking</div>
+  <div routerLink='/services'>Shop</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+<div class="container">
+  <div class="title">Your Bookings</div>
+  <div class="booking-list">
+    <div class="booking-card" *ngFor="let booking of bookings">
+      <div>Type: {{booking.bookingtype}}</div>
+      <div>Date: {{booking.bookingdate}}</div>
+      <div>Progress: {{booking.progress}}</div>
+      <div>Cost: {{booking.cost}}</div>
+      <ion-button (click)="deleteBooking(booking)">Delete</ion-button>
+    </div>
+  </div>
+  <div routerLink="/new-booking" class="new-booking">New Booking</div>
+</div>
+</div>
+<!--tipo, data mecanico, customer(logado), progresso (hardcoded), custo(hardcoded)-->

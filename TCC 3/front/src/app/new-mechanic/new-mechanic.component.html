@@ -1,0 +1,20 @@
+<ion-header>
+  <div routerLink='/all-bookings'>Booking</div>
+  <div routerLink='/shop-admin'>Shop</div>
+  <div routerLink='/mechanics'>Mechanics</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+<div class="container">
+  <form class="new-mechanic-form">
+    <input type="text" #name placeholder="Name"/>
+    <input type="text" #phone placeholder="Phone"/>
+    <select (change)='setAvailability($event)' placeholder="Select Type">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="true" >Available</option>
+      <option value="false" >Not Available</option>
+    </select>
+  <ion-button (click)='sendMechanic(name.value,phone.value)'>SUBMIT</ion-button>
+  </form>
+</div>
+</div>

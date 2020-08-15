@@ -1,0 +1,20 @@
+<ion-header>
+  <div routerLink='/all-bookings'>Booking</div>
+  <div routerLink='/shop-admin'>Shop</div>
+  <div routerLink='/mechanics'>Mechanics</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+<div class="container">
+  <form class="new-service-form">
+    <input type="text" #name placeholder="Name"/>
+    <input type="number" #cost placeholder="Cost"/>
+    <select (change)='setInStock($event)' placeholder="In Stock?">
+      <option value="" selected disabled hidden>Choose here</option>
+      <option value="true" >In stock</option>
+      <option value="false" >Not in stock</option>
+    </select>
+  <ion-button (click)='sendService(name.value,cost.value)'>SUBMIT</ion-button>
+  </form>
+</div>
+</div>

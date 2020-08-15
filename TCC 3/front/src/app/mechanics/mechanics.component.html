@@ -1,0 +1,19 @@
+<ion-header>
+  <div routerLink='/all-bookings'>Booking</div>
+  <div routerLink='/shop-admin'>Shop</div>
+  <div routerLink='/mechanics'>Mechanics</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+  <div class="container">
+    <div class="title">Mechanics</div>
+    <div class="mechanic-list">
+      <div class="mechanic-card" *ngFor="let mechanic of mechanics">
+        <div>Name: {{mechanic.mechanicName}}</div>
+        <div>Phone: {{mechanic.mechanicPhone}}</div>
+        <ion-button (click)="deleteMechanic(mechanic)">Delete</ion-button>
+      </div>
+    </div>
+    <div routerLink="/new-mechanic" class="new-mechanic">New Mechanic</div>
+  </div>
+  </div>

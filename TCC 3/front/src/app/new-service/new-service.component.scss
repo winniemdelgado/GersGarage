@@ -1,0 +1,96 @@
+@font-face{
+    font-family:'Milestone';
+    src:url('../../assets/milestone.woff')
+}
+
+ion-header{
+    height: 7.5vh;
+    background-color: rgb(172, 0, 0);
+    color: wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ion-header div{
+    text-shadow: 2px 2px  black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 20%;
+   height: 80%;
+   border: 2px solid wheat;
+   border-radius: 5px;
+   font-size: 36px; 
+   font-family: 'Milestone';
+   transition: transform 0.5s, background-color 0.5s ;
+    
+}
+ion-header div:hover{
+    background-color: rgb(85, 173, 255);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}
+.background{
+    background-image: url('https://wallpapercave.com/wp/wp5553448.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.container{
+    display: flex;
+    position: relative;
+    height: 100%;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.678);
+    flex-direction: column;
+    justify-content: center;
+}
+.new-service-form{
+    padding: 2%;
+    width: 20%;
+    height: 30%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-self: center;
+    justify-self: center;
+    border: 2px solid wheat;
+    background-color: rgb(136, 0, 0) ;
+    border-radius: 20px
+}
+input{
+    background-color: rgb(136, 0, 0);
+    border: 2px solid wheat;
+    border-radius: 5px;
+    color: wheat;
+}
+option{
+    background-color: rgb(136, 0, 0);
+    border: 2px solid wheat;
+    color: wheat;
+    border-radius: 5px; 
+}
+select{
+    background-color: rgb(136, 0, 0);
+    border: 2px solid wheat;
+    border-radius: 5px;
+    color: wheat;
+}
+select:disabled{
+    background-color: rgb(136, 0, 0);
+    border: 2px solid wheat;
+    border-radius: 5px;
+}
+::placeholder{
+    color: wheat;
+}
+ion-button{
+
+    --background:wheat;
+    --color: rgb(136, 0, 0);
+    text-shadow: 4px 4px  black; 
+}

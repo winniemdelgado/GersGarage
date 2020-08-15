@@ -1,0 +1,125 @@
+@font-face{
+    font-family:'Milestone';
+    src:url('../../assets/milestone.woff')
+}
+
+ion-header{
+    height: 7.5vh;
+    background-color: rgb(172, 0, 0);
+    color: wheat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ion-header div{
+    text-shadow: 2px 2px  black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 20%;
+   height: 80%;
+   border: 2px solid wheat;
+   border-radius: 5px;
+   font-size: 36px; 
+   font-family: 'Milestone';
+   transition: transform 0.5s, background-color 0.5s ;
+    
+}
+ion-header div:hover{
+    background-color: rgb(85, 173, 255);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}
+.background{
+    background-image: url('https://i.pinimg.com/originals/97/db/c3/97dbc3a9dfb94fb046105cd6f14e8d4d.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.container{
+    display: flex;
+    position: relative;
+    height: 100%;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.678);
+    flex-direction: column;
+}
+.title{
+    display: flex;
+    font-size: 48px;
+    align-self: center;
+    font-family: 'Milestone';
+    text-shadow: 4px 4px  black; 
+    color: wheat;
+}
+.service-list{
+    height: 80%;
+    overflow-y: scroll;
+  
+    
+}
+.service-card{
+    background-color: rgb(146, 0, 0);
+    display: flex;
+    margin: 2%;
+    height: 10%;
+    border: 2px solid wheat;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+    color: wheat;
+}
+.service-list::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  
+  /* Track */
+  .service-list::-webkit-scrollbar-track {
+    background: wheat;
+    border-radius: 5px;
+
+  }
+  
+  /* Handle */
+  .service-list::-webkit-scrollbar-thumb {
+    background: rgb(136, 0, 0);
+    border-radius: 5px;
+
+  }
+  
+  /* Handle on hover */
+  .service-list::-webkit-scrollbar-thumb:hover {
+    background: #555;}
+
+ion-button{
+    --background:wheat;
+    --color: rgb(136, 0, 0);
+    text-shadow: 4px 4px  black; 
+}
+.new-service{
+    margin-top: 20px;
+    align-self: center;
+    background-color:  rgb(136, 0, 0);
+    text-shadow: 2px 2px  black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   width: 20%;
+   height: 10%;
+   border: 2px solid wheat;
+   border-radius: 5px;
+   font-size: 36px; 
+   font-family: 'Milestone';
+   color: wheat;
+   transition: transform 0.5s, background-color 0.5s ;
+}
+.new-service:hover{
+    background-color: rgb(85, 173, 255);
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: transform 0.5s, background-color 0.5s;
+}

@@ -1,0 +1,21 @@
+<ion-header>
+  <div routerLink='/all-bookings'>Booking</div>
+  <div routerLink='/shop-admin'>Shop</div>
+  <div routerLink='/mechanics'>Mechanics</div>
+  <div routerLink='/login'>Logout</div>
+</ion-header>
+<div class="background">
+<div class="container">
+  <div class="title">Shop</div>
+  <div class="service-list">
+    <div class="service-card" *ngFor="let service of services">
+      <input type="text" (change)="setName(service,$event)" placeholder="Name: {{service.partname}}"/>
+      <input type="number" (change)="setCost(service,$event)" placeholder="Cost: {{service.cost}}"/>
+      <ion-button (click)="delete(service)">Delete</ion-button>
+      <ion-button (click)="save(service)">Save</ion-button>
+    </div>
+  </div>
+  <div routerLink="/new-service" class="new-service">New Service</div>
+</div>
+</div>
+<!--tipo, data mecanico, customer(logado), progresso (hardcoded), custo(hardcoded)-->
